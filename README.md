@@ -21,7 +21,7 @@ Firstly  you need install protoc in your unix system.If you have windows you can
 When you have installed protoc you can execute ms_a/genProtoBuffers.sh to generate MessageMetricProtos.java into src/main/java/test/microservices/a/bean/protos.
 Note: You need to modify genProtoBuffers to add news dtos.
 
-* messagemetric.proto
+** messagemetric.proto
 
 	package test.microservices.b.bean;
 
