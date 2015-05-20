@@ -23,22 +23,23 @@ Note: You need to modify genProtoBuffers to add news dtos.
 
 messagemetric.proto
 
-package test.microservices.b.bean;
+$ package test.microservices.b.bean;
 
-option java_package = "test.microservices.a.bean.protos";
-option java_outer_classname = "MessageMetricProtos";
+$ option java_package = "test.microservices.a.bean.protos";
+$ option java_outer_classname = "MessageMetricProtos";
 
-message MessageMetric {
-    required Message messages = 1;
-    required int64 generatingTime = 2;
+$ message MessageMetric {
+$     required Message messages = 1;
+$     required int64 generatingTime = 2;
 
-    message Message {
-        required int64 id = 1;
-        optional string content = 2;
-    }
-}
+    $ message Message {
+    $     required int64 id = 1;
+    $     optional string content = 2;
+    $ }
+$ }
 
 This is protobuffers schema where:
+
 	* java_package is the package where java dto will generate.
 	* java_outer_classname is the final name of java dto wrapper.
 	
