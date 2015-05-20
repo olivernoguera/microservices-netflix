@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: test-eureka-server
+
+server:
+  port: 8761
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+  server:
+    enableSelfPreservation: false
+    retentionTimeInMSInDeltaQueue: 0
+    deltaRetentionTimerIntervalInMs : 10
+    waitTimeInMsWhenSyncEmpty: 0
+  instance:
+    preferIpAddress: true
+    metadataMap:
+          instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+logging:
+  level:
+    com.netflix: 'WARN'
+    org.springframework.cloud: 'WARN'
